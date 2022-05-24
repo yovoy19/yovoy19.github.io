@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.0.0-alpha.111">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2022/05/"/>
+  
+  <link rel="canonical" href="http://example.com/2022/05/24/spark ha & yarn配置/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022/5 - Hexo</title>
+  <title>Spark HA & Yarn配置 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="This is yovoy_blog - John Doe - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/05/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark HA &amp; Yarn配置">
+<meta property="og:url" content="http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This is yovoy_blog">
+<meta property="og:description" content="Spark支持ZooKeeper来实现 HA,on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算 一、Spark（HA）（1）修改spark-env.sh配置文件删除SPARK_MASTER_HOST&#x3D;node1不固定master节点增加内容： 1234567## 设置历史服务器# 配置的意思是  将spark程序运行的历史日志 存到h">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-05-24T15:26:28.126Z">
+<meta property="article:modified_time" content="2022-05-24T15:55:29.352Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2174,7 +2176,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2443,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
 
@@ -2518,25 +2520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2546,183 +2530,232 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="This is yovoy_blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         Spark HA & Yarn配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Spark支持ZooKeeper来实现 HA,on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算
-一、Spark（HA）（1）修改spark-env.sh配置文件删除SPARK_MASTER_HOST=node1不固定master节点增加内容：
-1234567## 设置历史服务器# 配置的意思是  将spark程序运行的历史日志 ...
-      
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-24T23:26:28+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 24, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>Spark支持ZooKeeper来实现 HA,<br>on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算</p>
+<div class="story post-story"><h2 id="一、Spark（HA）"><a href="#一、Spark（HA）" class="headerlink" title="一、Spark（HA）"></a>一、Spark（HA）</h2><p>（1）修改spark-env.sh配置文件<br>删除<code>SPARK_MASTER_HOST=node1</code>不固定master节点<br>增加内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 设置历史服务器</span></span><br><span class="line"><span class="comment"># 配置的意思是  将spark程序运行的历史日志 存到hdfs的/sparklog文件夹中</span></span><br><span class="line">SPARK_HISTORY_OPTS=<span class="string">&quot;-Dspark.history.fs.logDirectory=hdfs://node1:8020/sparklog/ -Dspark.history.fs.cleaner.enabled=true&quot;</span></span><br><span class="line">SPARK_DAEMON_JAVA_OPTS=<span class="string">&quot;-Dspark.deploy.recoveryMode=ZOOKEEPER -Dspark.deploy.zookeeper.url=node1:2181,node2:2181,node3:2181 -Dspark.deploy.zookeeper.dir=/spark-ha&quot;</span></span><br><span class="line"><span class="comment"># spark.deploy.recoveryMode 指定HA模式 基于Zookeeper实现</span></span><br><span class="line"><span class="comment"># 指定Zookeeper的连接地址</span></span><br><span class="line"><span class="comment"># 指定在Zookeeper中注册临时节点的路径</span></span><br></pre></td></tr></table></figure>
+<p>(2)将spark-env.sh分发到node2和node3</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp spark-env.sh node2:/export/server/spark/conf/</span><br><span class="line">scp spark-env.sh node3:/export/server/spark/conf</span><br></pre></td></tr></table></figure>
+<p>(3)启动集群<br>1.关闭当前StandAlone集群</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/stop-all.sh</span><br></pre></td></tr></table></figure>
+<p>2.在node1上 启动一个master 和全部worker</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /export/server/spark/sbin/start-all.sh</span><br><span class="line">sbin/start-all.sh</span><br></pre></td></tr></table></figure>
+<p>3.在node2上启动一个备用的master进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/start-master.sh</span><br></pre></td></tr></table></figure>
+<p>(base) [root@node1 ~]# jps<br>3985 Worker<br>3749 Master<br>4300 Jps<br>2383 QuorumPeerMain<br>4.查看状态：①node1:8080端口状态为ALIVE<br>在node2上是备用master，当node1启用master时node2状态为standby<br>(8080端口可能会发生顺延)<br>5.关闭node1的master进程，node2master启用其状态切换为ALIVE<br>(4)测试：提交一个spark任务到当前<code>ALIVE</code>master上:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit --master spark://node1:7077 </span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 1000</span><br></pre></td></tr></table></figure>
+<p>提交后，将<code>ALIVE</code>master kill掉，不会影响程序<br>当新的master（即使用node2备用master）接收集群后, 程序继续运行, 正常得到结果<br>HA模式下，主备切换不会影响正在运行的程序</p>
+</div><div class="story post-story"><h2 id="二、Spark-Yarn"><a href="#二、Spark-Yarn" class="headerlink" title="二、Spark(Yarn)"></a>二、Spark(Yarn)</h2><p>yarn-cluster：适用于生产环境<br>yarn-client：适用于交互、调试，希望立即看到app的输出<br>在spark-env.sh 以及 环境变量配置文件中即可<br>(1)连接到YARN中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/pyspark --master yarn --deploy-mode client|cluster</span><br></pre></td></tr></table></figure>
+<p>注意: 交互式环境 pyspark  和 spark-shell  无法运行 cluster模式<br>(2)client 模式测试<br>测试yarn提交spark任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/export/server/spark/bin/spark-submit --master yarn --deploy-mode cluster \ </span><br><span class="line">--driver-memory 512m --executor-memory 512m --num-executors 3 --total-executor-cores 3 \</span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 3 </span><br></pre></td></tr></table></figure>
+<p>(3)cluster 模式测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/export/server/spark/bin/spark-submit --master yarn --deploy-mode cluster \</span><br><span class="line">--driver-memory 512m --executor-memory 512m --num-executors 3 --total-executor-cores 3 \</span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 3</span><br></pre></td></tr></table></figure>
+<p>(4)通过web UI查看任务运行状态<br><a target="_blank" rel="noopener" href="http://master:8080/">http://master:8080/</a></p>
+
+</div>
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-24T23:26:28+08:00">2022-05-24</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/' itemprop="url">
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/>http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T23:55:29+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：May 24, 2022</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/24/Spark%20local&%20stand-alone%E9%85%8D%E7%BD%AE/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="This is yovoy_blog">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/05/24/Spark%20local&%20stand-alone%E9%85%8D%E7%BD%AE/'>
+          <p class='title'>spark local & stand-alone配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Spark 有多种运行模式， Spark 支持本地运行模式（Local 模式）、独立运行模式（Standalone 模式）、YARN（Yet Another Resource Negotiato...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/24/Spark%20local&%20stand-alone%E9%85%8D%E7%BD%AE/"  itemprop="url">
-        spark local & stand-alone配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Spark 有多种运行模式， Spark 支持本地运行模式（Local 模式）、独立运行模式（Standalone 模式）、YARN（Yet Another Resource Negotiator）local(本地模式)：常用于本地开发测试，本地还分为local单线程和local-cluster多线程;standalone(集群模式)：典型的Mater&#x2F;slave模式，不过也能看出...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-24T18:27:19+08:00">2022-05-24</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/05/24/Spark%20local&%20stand-alone%E9%85%8D%E7%BD%AE/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/21/Spark%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="This is yovoy_blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/21/Spark%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/"  itemprop="url">
-        spark基础环境配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        spark 是一种与 Hadoop 相似的开源集群计算环境，但是两者之间还存在一些不同之处，这些有用的不同之处使 Spark 在某些工作负载方面表现得更加优越，换句话说，Spark 启用了内存分布数据集，除了能够提供交互式查询外，它还可以优化迭代工作负载
-一、基础环境1.导入三台虚拟机，配置如下
+  </article>
 
 
 
-主机名
-node1
-node2
-node3
 
 
 
-IP
-192.168.231.151
-1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-21T17:45:28+08:00">2022-05-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/05/21/Spark%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
-
-
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2730,87 +2763,34 @@ IP
     
     
 
-<section class="widget blogger shadow floatable blur desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
     
+  <header>
     
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
-  
 
-  
-    
-    
-
-  
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Spark%EF%BC%88HA%EF%BC%89"><span class="toc-text">一、Spark（HA）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Spark-Yarn"><span class="toc-text">二、Spark(Yarn)</span></a></li></ol>
+    </div>
+  </section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2839,13 +2819,14 @@ IP
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2854,14 +2835,14 @@ IP
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3811,7 +3792,7 @@ IP
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2022/","name":"2022"}},{"@type":"ListItem","position":4,"item":{"@id":"http://example.com/archives/2022/5/","name":"5"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/24/Spark HA & Yarn配置/","name":"Spark HA & Yarn配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spark HA & Yarn配置","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-24T15:26:28.126Z","dateModified":"2022-05-24T15:55:29.352Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
