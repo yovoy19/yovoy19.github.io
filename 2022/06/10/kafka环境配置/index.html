@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2022/05/24/spark ha & yarn配置/"/>
+  <link rel="canonical" href="http://example.com/2022/06/10/kafka环境配置/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -31,19 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Spark HA & Yarn配置 - Hexo</title>
+  <title>kafka环境配置 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="This is yovoy_blog - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spark HA &amp; Yarn配置">
-<meta property="og:url" content="http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="kafka环境配置">
+<meta property="og:url" content="http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Spark支持ZooKeeper来实现 HA,on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算 一、Spark（HA）（1）修改spark-env.sh配置文件删除SPARK_MASTER_HOST&#x3D;node1不固定master节点增加内容： 1234567## 设置历史服务器# 配置的意思是  将spark程序运行的历史日志 存到h">
+<meta property="og:description" content="Kafka 是一种分布式的，基于发布 &#x2F; 订阅的消息系统。主要设计目标如下： （1）以时间复杂度为 O(1) 的方式提供消息持久化能力，即使对 TB 级以上数据也能保证常数时间复杂度的访问性能。（2）高吞吐率。即使在非常廉价的商用机器上也能做到单机支持每秒 100K 条以上消息的传输。（3）支持 Kafka Server 间的消息分区，及分布式消费，同时保证每个 Partition 内的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-24T15:26:28.126Z">
-<meta property="article:modified_time" content="2022-05-24T15:55:29.352Z">
+<meta property="article:published_time" content="2022-06-10T06:05:42.774Z">
+<meta property="article:modified_time" content="2022-06-10T09:43:46.152Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2521,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2542,7 +2542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Spark HA & Yarn配置
+        kafka环境配置
       </h1>
       <div class='new-meta-box'>
         
@@ -2563,10 +2563,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-24T23:26:28+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-10T14:05:42+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 24, 2022</p>
+    <p>发布于：Jun 10, 2022</p>
   </a>
 </div>
 
@@ -2587,29 +2587,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Spark支持ZooKeeper来实现 HA,<br>on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算</p>
-<div class="story post-story"><h2 id="一、Spark（HA）"><a href="#一、Spark（HA）" class="headerlink" title="一、Spark（HA）"></a>一、Spark（HA）</h2><p>（1）修改spark-env.sh配置文件<br>删除<code>SPARK_MASTER_HOST=node1</code>不固定master节点<br>增加内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 设置历史服务器</span></span><br><span class="line"><span class="comment"># 配置的意思是  将spark程序运行的历史日志 存到hdfs的/sparklog文件夹中</span></span><br><span class="line">SPARK_HISTORY_OPTS=<span class="string">&quot;-Dspark.history.fs.logDirectory=hdfs://node1:8020/sparklog/ -Dspark.history.fs.cleaner.enabled=true&quot;</span></span><br><span class="line">SPARK_DAEMON_JAVA_OPTS=<span class="string">&quot;-Dspark.deploy.recoveryMode=ZOOKEEPER -Dspark.deploy.zookeeper.url=node1:2181,node2:2181,node3:2181 -Dspark.deploy.zookeeper.dir=/spark-ha&quot;</span></span><br><span class="line"><span class="comment"># spark.deploy.recoveryMode 指定HA模式 基于Zookeeper实现</span></span><br><span class="line"><span class="comment"># 指定Zookeeper的连接地址</span></span><br><span class="line"><span class="comment"># 指定在Zookeeper中注册临时节点的路径</span></span><br></pre></td></tr></table></figure>
-<p>(2)将spark-env.sh分发到node2和node3</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp spark-env.sh node2:/export/server/spark/conf/</span><br><span class="line">scp spark-env.sh node3:/export/server/spark/conf</span><br></pre></td></tr></table></figure>
-<p>(3)启动集群<br>1.关闭当前StandAlone集群</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/stop-all.sh</span><br></pre></td></tr></table></figure>
-<p>2.在node1上 启动一个master 和全部worker</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /export/server/spark/sbin/start-all.sh</span><br><span class="line">sbin/start-all.sh</span><br></pre></td></tr></table></figure>
-<p>3.在node2上启动一个备用的master进程</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/start-master.sh</span><br></pre></td></tr></table></figure>
-<p>(base) [root@node1 ~]# jps<br>3985 Worker<br>3749 Master<br>4300 Jps<br>2383 QuorumPeerMain<br>4.查看状态：①node1:8080端口状态为ALIVE<br>在node2上是备用master，当node1启用master时node2状态为standby<br>(8080端口可能会发生顺延)<br>5.关闭node1的master进程，node2master启用其状态切换为ALIVE<br>(4)测试：提交一个spark任务到当前<code>ALIVE</code>master上:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/spark-submit --master spark://node1:7077 </span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 1000</span><br></pre></td></tr></table></figure>
-<p>提交后，将<code>ALIVE</code>master kill掉，不会影响程序<br>当新的master（即使用node2备用master）接收集群后, 程序继续运行, 正常得到结果<br>HA模式下，主备切换不会影响正在运行的程序</p>
-</div><div class="story post-story"><h2 id="二、Spark-Yarn"><a href="#二、Spark-Yarn" class="headerlink" title="二、Spark(Yarn)"></a>二、Spark(Yarn)</h2><p>yarn-cluster：适用于生产环境<br>yarn-client：适用于交互、调试，希望立即看到app的输出<br>在spark-env.sh 以及 环境变量配置文件中即可<br>(1)连接到YARN中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/pyspark --master yarn --deploy-mode client|cluster</span><br></pre></td></tr></table></figure>
-<p>注意: 交互式环境 pyspark  和 spark-shell  无法运行 cluster模式<br>(2)client 模式测试<br>测试yarn提交spark任务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/export/server/spark/bin/spark-submit --master yarn --deploy-mode cluster \ </span><br><span class="line">--driver-memory 512m --executor-memory 512m --num-executors 3 --total-executor-cores 3 \</span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 3 </span><br></pre></td></tr></table></figure>
-<p>(3)cluster 模式测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/export/server/spark/bin/spark-submit --master yarn --deploy-mode cluster \</span><br><span class="line">--driver-memory 512m --executor-memory 512m --num-executors 3 --total-executor-cores 3 \</span><br><span class="line">/export/server/spark/examples/src/main/python/pi.py 3</span><br></pre></td></tr></table></figure>
-<p>(4)通过web UI查看任务运行状态<br><a target="_blank" rel="noopener" href="http://master:8080/">http://master:8080/</a></p>
+    <p>Kafka 是一种分布式的，基于发布 &#x2F; 订阅的消息系统。主要设计目标如下：</p>
+<p>（1）以时间复杂度为 O(1) 的方式提供消息持久化能力，即使对 TB 级以上数据也能保证常数时间复杂度的访问性能。<br>（2）高吞吐率。即使在非常廉价的商用机器上也能做到单机支持每秒 100K 条以上消息的传输。<br>（3）支持 Kafka Server 间的消息分区，及分布式消费，同时保证每个 Partition 内的消息顺序传输。<br>（4）同时支持离线数据处理和实时数据处理。<br>Scale out：支持在线水平扩展</p>
+<h3 id="一、基础配置"><a href="#一、基础配置" class="headerlink" title="一、基础配置"></a>一、基础配置</h3><p>1.导入三台已配置好zookeeper组件以及免密互通的虚拟机</p>
+<h3 id="二、安装配置kafka"><a href="#二、安装配置kafka" class="headerlink" title="二、安装配置kafka"></a>二、安装配置kafka</h3><p>2.在master主机上，上传安装包，解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf kafka_2.11-2.0.0.tgz</span><br><span class="line"><span class="built_in">ln</span> -s kafka_2.11-2.0.0/ kafka <span class="comment">#建立软连接</span></span><br></pre></td></tr></table></figure>
+<p>3.修改配置文件 server.properties</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi/export/server/kafka/config/server.properties</span><br></pre></td></tr></table></figure>
+<p>修改内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#listeners=PLAINTEXT://:9092 取消注释，内容改为：</span></span><br><span class="line">listeners=PLAINTEXT://master:9092  <span class="comment">#PLAINTEXT为通信使用明文（加密ssl）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">log.dirs=/tmp/kafka-logs为默认日志文件存储的位置改为</span><br><span class="line">log.dirs=/export/server/data/kafka-logs</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数据安全性（持久化之前先放到缓存上，从缓存刷到磁盘上）</span></span><br><span class="line">interval.messages interval.ms</span><br><span class="line">168/24=7，1073741824/1024=1GB      <span class="comment">#数据保留策略</span></span><br><span class="line">300000ms = 300s = 5min         <span class="comment">#超过了删掉</span></span><br><span class="line">（最后修改时间还是创建时间--&gt;日志段中最晚的一条消息，维护这个最大的时间戳--&gt;用户无法 干预）</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#指定zookeeper集群地址</span></span><br><span class="line">zookeeper.connect=localhost:2181 修改为</span><br><span class="line">zookeeper.connect=master:2181,slave1:2181,slave2:2181</span><br><span class="line">group.initial.rebalance.delay.ms=0 修改为 group.initial.rebalance.delay.ms=3000</span><br></pre></td></tr></table></figure>
+<p>4.分发配置文件<br>给node2，node3分发kafka</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /export/server/ </span><br><span class="line">scp -r /export/server/kafka_2.11-2.0.0/ node2:<span class="variable">$PWD</span> </span><br><span class="line">scp -r /export/server/kafka_2.11-2.0.0/ node3:<span class="variable">$PWD</span> </span><br></pre></td></tr></table></figure>
+<p>5.配置环境变量（三台）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#KAFKA_HOME</span></span><br><span class="line"><span class="built_in">export</span> KAFKA_HOME=/export/server/kafka</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$KAFKA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<p>6.node2,node3修改配置文件server.properties：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi server.properties</span><br><span class="line">listeners=PLAINTEXT://master:9092修改listeners=PLAINTEXT://node2:9092 </span><br><span class="line">同理node3 同样操作</span><br></pre></td></tr></table></figure>
+<p>7.验证kafka</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（基于zookeeper启动）</span><br><span class="line">kafka-server-start.sh -daemon /export/ <span class="comment">#启动kafka</span></span><br><span class="line">kafka-server-stop.sh stop  <span class="comment">#关闭kafka</span></span><br></pre></td></tr></table></figure>
 
-</div>
+
   </div>
   
   
@@ -2627,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/>http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/</a></p>
+                <p>本文永久链接是：<a href=http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/>http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a></p>
               
             
           </blockquote>
@@ -2644,10 +2643,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-24T23:55:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-10T17:43:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 24, 2022</p>
+    <p>更新于：Jun 10, 2022</p>
   </a>
 </div>
 
@@ -2666,7 +2665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=kafka环境配置 - Hexo&summary="
           
           >
           
@@ -2678,7 +2677,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=kafka环境配置 - Hexo&summary="
           
           >
           
@@ -2690,7 +2689,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/&title=Spark HA & Yarn配置 - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=kafka环境配置 - Hexo&summary="
           
           >
           
@@ -2723,16 +2722,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>kafka环境配置</p>
-          <p class='content'>Kafka 是一种分布式的，基于发布 &#x2F; 订阅的消息系统。主要设计目标如下：
-（1）以时间复杂度为 O(1) 的方式提供消息持久化能力，即使对 TB 级以上数据也能保证常数时间复杂度的...</p>
+        <a class='prev' href='/2022/06/10/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>kafka命令行操作</p>
+          <p class='content'>Kafka 中提供了许多命令行工具用于管理集群的变更。
+
+
+
+kafka-configs.sh
+用于配置管理
+
+
+
+kafka-console-consumer.sh
+用于消费消息
+
+
+kafk...</p>
         </a>
       
       
-        <a class='next' href='/2022/05/24/Spark%20local&%20stand-alone%E9%85%8D%E7%BD%AE/'>
-          <p class='title'>spark local & stand-alone配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Spark 有多种运行模式， Spark 支持本地运行模式（Local 模式）、独立运行模式（Standalone 模式）、YARN（Yet Another Resource Negotiato...</p>
+        <a class='next' href='/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/'>
+          <p class='title'>Spark HA & Yarn配置<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Spark支持ZooKeeper来实现 HA,on yarn:运行在 yarn 资源管理器框架之上，由 yarn 负责资源管理，Spark 负责任务调度和计算
+一、Spark（HA）（1）修改s...</p>
         </a>
       
     </div>
@@ -2748,7 +2760,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2781,7 +2793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Spark%EF%BC%88HA%EF%BC%89"><span class="toc-text">一、Spark（HA）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Spark-Yarn"><span class="toc-text">二、Spark(Yarn)</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">一、基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEkafka"><span class="toc-text">二、安装配置kafka</span></a></li></ol>
     </div>
   </section>
 
@@ -3798,7 +3810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/24/Spark HA & Yarn配置/","name":"Spark HA & Yarn配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Spark HA & Yarn配置","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/05/24/Spark%20HA%20&%20Yarn%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-05-24T15:26:28.126Z","dateModified":"2022-05-24T15:55:29.352Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/06/10/kafka环境配置/","name":"kafka环境配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"kafka环境配置","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2022-06-10T06:05:42.774Z","dateModified":"2022-06-10T09:43:46.152Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
