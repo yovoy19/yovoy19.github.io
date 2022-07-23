@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.0.0-alpha.111">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2022/06/"/>
+  
+  <link rel="canonical" href="http://example.com/2022/07/23/markdown语法/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022/6 - Hexo</title>
+  <title>markdown语法 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="This is yovoy_blog - John Doe - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/06/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown语法">
+<meta property="og:url" content="http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This is yovoy_blog">
+<meta property="og:description" content="markdown语法为纯文本的标记语言，github博客编辑支持的编辑语言。 一、标题使用“#”区别 1234# 一级标题## 二级标题.....以此类推###### 六级标题 例如： ### 一、标题 （效果如标题一）注：markdown标准语法一般在”#”后加一个空格再写文字 二、字体加粗将文字使用两个”“包起来斜体将文字使用一个”“包起来斜体加粗将文字使用三个“*”包起来删除线要加删除线的文">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-07-23T03:08:13.506Z">
+<meta property="article:modified_time" content="2022-07-23T06:45:19.002Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2174,7 +2176,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2443,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
 
@@ -2518,28 +2520,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/18/Eagle%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2548,250 +2530,237 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="This is yovoy_blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/18/Eagle%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7/"  itemprop="url">
-        kafka Eagle运维监控
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        kafka 自身并没有继承监控管理系统, 因此对 kafka 的监控管理比较不便, 好在有大量的第三方监控管理系统来使用
-一、安装部署kafka Eagle####### 安装包下载地址：https://github.com/smartloli/kafka-eagle-bin/	
-1.解压、安装2.配置环境变量：JAVA_HOME和KE_HOMEvi &#x2F;etc&#x2F;profl...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        markdown语法
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-07-23T11:08:13+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 23, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>markdown语法为纯文本的标记语言，github博客编辑支持的编辑语言。</p>
+<h5 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h5><p>使用“#”区别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">.....以此类推</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<p>例如： ### 一、标题 （效果如标题一）<br>注：markdown标准语法一般在”#”后加一个空格再写文字</p>
+<h5 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h5><p><strong>加粗</strong><br>将文字使用两个”<em>“包起来<br><em>斜体</em><br>将文字使用一个”</em>“包起来<br><em><strong>斜体加粗</strong></em><br>将文字使用三个“*”包起来<br><del>删除线</del><br>要加删除线的文字用两个“~~”包起来</p>
+<h5 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h5><p>在文字前加“&gt;”即可，可嵌套加n个”&gt;”</p>
+<h5 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h5><p>即横线，使用三个或三个以上的“-”或“*”号都可以</p>
+<h5 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h5><p>语法: <p>![图片alt]（图片地址”图片title”）</p><br>图片alt:显示在图片下面的文字，相当于对图片内容的解释。<br>图片title:图片的标题，当鼠标移到图片上时显示的内容。title可加可不加<br>注：图片地址为图片网址也就是一个链接</p>
+<h5 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h5><p>语法：<a href="%E8%B6%85%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="超链接title">超链接名</a><br>title可加可不加</p>
+<h5 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h5><p><strong>无序列表：</strong>”- 、+、*“都可以使用<br><strong>有序列表：</strong>数字加点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表</span><br><span class="line">2. 有序列表</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<ul>
+<li>无序列表</li>
+</ul>
+<ol>
+<li>有序列表</li>
+<li>有序列表<br><strong>列表嵌套：</strong>上一级和下一级之间隔三个空格<br>效果：<br>-一级无序列表   -二级无序列表<br>1.一级有序列表   2.二级有序列表<h5 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头|</span><br><span class="line">-----|-----|----|</span><br><span class="line">内容|内容|内容|</span><br><span class="line">内容|内容|内容|</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br></pre></td></tr></table></figure>
+<h5 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">单行代码用&quot;`&quot;包起来</span><br><span class="line">多行代码用三个 `包起来</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-18T12:39:20+08:00">2022-06-18</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2022/06/18/Eagle%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7/' itemprop="url">
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/>http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-23T14:45:19+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 23, 2022</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/10/kafka%20API%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="This is yovoy_blog">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/&title=markdown语法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/&title=markdown语法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/&title=markdown语法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/2022/07/23/github%E5%9B%BE%E5%BA%8A/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>picgo+github图床</p>
+          <p class='content'>picgo工具配合gitee建立图床是大家一直普遍使用的方法。但是到我用的时候图片上传不上去，我一看已经是2022年的经验了，就重新筛选了一下，找到一个网页教程都是图示，操作起来很简单。但还是想...</p>
+        </a>
+      
+      
+        <a class='next' href='/2022/07/23/HTML%E8%AF%AD%E6%B3%95/'>
+          <p class='title'>Jul 23, 2022<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/07/23/markdown%E8%AF%AD%E6%B3%95/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/10/kafka%20API%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"  itemprop="url">
-        kafka API 使用方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        一、生产者 API一个生产者逻辑应具备以下步骤：(1)配置生产者客户端参数及创建相应的生产者实例(2)构建待发送的消息(3)发送消息(4)关闭生产者实例Kafka的Producer发送消息采用的是异步发送的方式。在消息发送的过程中，涉及到了两个线程——main线程和Sender线程，以及一个线程共享变量——RecordAccumulator。main线程将消息发送给RecordAccumul...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-10T17:45:41+08:00">2022-06-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/10/kafka%20API%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/10/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="This is yovoy_blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/10/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/"  itemprop="url">
-        kafka命令行操作
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Kafka 中提供了许多命令行工具用于管理集群的变更。
+  </article>
 
 
 
-kafka-configs.sh
-用于配置管理
 
 
 
-kafka-console-consumer.sh
-用于消费消息
-
-
-kafka-console-producer.sh
-用于生产消息
-
-
-kafka-consumer-perf-test.sh
-用于测试消费性能
-
-
-kafka-topics.sh
-用于管理主题
-
-
-kafka...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-10T17:44:48+08:00">2022-06-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/10/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Hexo">
-    <meta itemprop="description" content="This is yovoy_blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"  itemprop="url">
-        kafka环境配置
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Kafka 是一种分布式的，基于发布 &#x2F; 订阅的消息系统。主要设计目标如下：
-（1）以时间复杂度为 O(1) 的方式提供消息持久化能力，即使对 TB 级以上数据也能保证常数时间复杂度的访问性能。（2）高吞吐率。即使在非常廉价的商用机器上也能做到单机支持每秒 100K 条以上消息的传输。（3）支持 Kafka Server 间的消息分区，及分布式消费，同时保证每个 Partition...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-10T14:05:42+08:00">2022-06-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/10/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
-
-
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2799,87 +2768,34 @@ kafka...
     
     
 
-<section class="widget blogger shadow floatable blur desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
     
+  <header>
     
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
-  
 
-  
-    
-    
-
-  
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-text">一、标题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E4%BD%93"><span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">四、分割线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%9B%BE%E7%89%87"><span class="toc-text">五、图片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">六、超链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-text">七、列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-text">八、表格</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E4%BB%A3%E7%A0%81"><span class="toc-text">九、代码</span></a></li></ol>
+    </div>
+  </section>
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2908,13 +2824,14 @@ kafka...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2923,14 +2840,14 @@ kafka...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3880,7 +3797,7 @@ kafka...
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2022/","name":"2022"}},{"@type":"ListItem","position":4,"item":{"@id":"http://example.com/archives/2022/6/","name":"6"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"This is yovoy_blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/07/23/markdown语法/","name":"markdown语法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"This is yovoy_blog","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"This is yovoy_blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"markdown语法","description":"This is yovoy_blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/07/23/markdown%E8%AF%AD%E6%B3%95/","wordCount":0,"datePublished":"2022-07-23T03:08:13.506Z","dateModified":"2022-07-23T06:45:19.002Z","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
